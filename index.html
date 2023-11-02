@@ -386,15 +386,13 @@
             </li>
           </ul>
         </div>
-        <div class="footer-column-form">
+        <div class="footer-form-wrap">
           <p class="text_medium-light">Subscribe</p>
           <form class="footer-form">
-            <label class="footer-form-label">
-              <input type="email" class="footer-form-email" name="subscribe-email" placeholder="E-mail" />
-            </label>
-            <button class="btn-hero-footer" type="submit">
+            <input class="footer-form-field" type="email" name="subscribe-email" placeholder="E-mail" required />
+            <button class="footer-form-btn" type="submit">
               Subscribe
-              <svg class="icon-footer-form" width="24" height="24">
+              <svg class="footer-form-btn-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
@@ -402,48 +400,73 @@
         </div>
       </div>
     </footer>
-    <div class="modal-bg">
-      <div class="form-order-service">
-        <svg class="form-hero-close" width="24" height="24">
-          <use href="./images/icons.svg#icon-close" width="8" height="8"></use>
-        </svg>
-        <p class="text_medium">Leave your contacts and we will call you back</p>
+    <!-- Backdrop & Modal Window -->
+    <div class="backdrop is-open">
+      <div class="modal">
+        <button class="modal-close-btn" type="button" aria-label="modal close button">
+          <svg class="modal-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="text_medium hero-form-description">Leave your contacts and we will call you back</p>
+        <!-- Form -->
         <form class="hero-form">
-          <fieldset class="hero-form-group">
-            <label class="hero-form-label">
-              Name
-              <input class="hero-form-input" type="text" name="name" />
-              <svg class="icon-hero-form" width="18" height="18">
+          <div class="hero-form-field-wrap">
+            <label class="hero-form-field-label" for="user-name"> Name </label>
+            <div class="hero-form-input-wrap">
+              <input class="hero-form-field" type="text" name="user_name" id="user-name" required />
+              <svg class="hero-form-field-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
-            </label>
-            <label class="hero-form-label">
-              Phone
-              <input class="hero-form-input" type="tel" name="phone" />
-              <svg class="icon-hero-form" width="18" height="24">
+            </div>
+          </div>
+          <div class="hero-form-field-wrap">
+            <label class="hero-form-field-label" for="user-phone"> Phone </label>
+            <div class="hero-form-input-wrap">
+              <input class="hero-form-field" type="tel" name="user_phone" id="user-phone" required />
+              <svg class="hero-form-field-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
-            </label>
-            <label class="hero-form-label">
-              Email
-              <input class="hero-form-input" type="email" name="email" />
-              <svg class="icon-hero-form" width="18" height="24">
+            </div>
+          </div>
+          <div class="hero-form-field-wrap">
+            <label class="hero-form-field-label" for="user-email"> Email </label>
+            <div class="hero-form-input-wrap">
+              <input class="hero-form-field" type="email" name="user_email" id="user-email" required />
+              <svg class="hero-form-field-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
-            </label>
-            <label class="hero-form-label">
-              Comment
-              <textarea class="hero-form-textara" name="comment" rows="3" placeholder="Text input"> </textarea>
-            </label>
-          </fieldset>
-          <label class="hero-form-checkbox">
-            <input class="hero-form-checkbox-privacy" type="checkbox" name="checkbox-privacy" />
-            <p>
+            </div>
+          </div>
+          <div class="hero-form-comment-wrap">
+            <label class="hero-form-field-label" id="user-comment"> Comment </label>
+            <textarea
+              class="hero-form-message"
+              name="user_comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="hero-form-checkbox-wrap">
+            <input
+              class="hero-form-checkbox visually-hidden"
+              type="checkbox"
+              name="user_privacy"
+              id="user-privacy"
+              value="true"
+              required
+            />
+            <label class="hero-form-checkbox-label" for="user-privacy">
+              <span class="hero-form-own-checkbox">
+                <svg class="hero-form-own-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-checkmark"></use>
+                </svg>
+              </span>
               I accept the terms and conditions of the
               <a class="hero-form-privacy-link" href="#">Privacy Policy</a>
-            </p>
-          </label>
-          <button class="btn-hero-form" type="submit">Send</button>
+            </label>
+          </div>
+          <button class="hero-form-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
